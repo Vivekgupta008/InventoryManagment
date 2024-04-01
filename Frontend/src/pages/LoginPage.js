@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import { IoEye, IoEyeOff } from "react-icons/io5";
 import axios from 'axios';
 function LoginPage(){
-  
+  const history=useNavigate();
   const [show,setShow] = useState(false);
   const [data,setData] = useState({
       email:"",
@@ -31,6 +31,15 @@ function LoginPage(){
         })
         .then((response) => {
           if(response.data.success == true){
+            if(response.data.confirmUser.role == "Delivery"){
+              history('/del');
+            }
+            if(response.data.confirmUser.role == "Admin"){
+              history('/admin');
+            }
+            if(response.data.confirmUser.role == "Inventory"){
+              history('/inv');
+            }
             console.log(response.data.confirmUser.role);
           }
           else{
@@ -58,7 +67,7 @@ function LoginPage(){
         <div onClick={(event)=>{toggleShow(event)}} className='absolute right-[37%] top-[50%]'>{show ?(<IoEye/>):(<IoEyeOff/>)}</div>
       </div>
       <div  className='w-[70%] mt-[2%]'>
-        <NavLink to={"/"}><button className='w-[100%] bg-black text-white px-4 py-1 rounded-md' onClick={(e)=>{authLogin(e)}}>Login</button></NavLink></div>
+       <button className='w-[100%] bg-black text-white px-4 py-1 rounded-md' onClick={(e)=>{authLogin(e)}}>Login</button></div>
       <NavLink to={'/register'}><span className='text-xs mt-[1%] text-opacity-100'>New User? </span><span className='text-xs mt-[1%] text-opacity-100 text-gray-400'>Register</span></NavLink>
      </div>
     </div>
