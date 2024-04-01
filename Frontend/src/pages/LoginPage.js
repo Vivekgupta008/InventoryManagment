@@ -37,7 +37,7 @@ function LoginPage(){
             if(response.data.confirmUser.role == "Admin"){
               history('/admin');
             }
-            if(response.data.confirmUser.role == "Inventory"){
+            if(response.data.confirmUser.role == "Inventory Manager"){
               history('/inv');
             }
             console.log(response.data.confirmUser.role);
