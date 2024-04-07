@@ -17,6 +17,7 @@ function InvItem({dataitem}) {
             catch(error){
                 console.error(error);
             }
+            window.location.reload(true);
     }
 
   return (

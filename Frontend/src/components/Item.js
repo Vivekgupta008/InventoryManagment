@@ -19,6 +19,7 @@ function Item({ dataitem }) {
       catch(error){
           console.error(error);
       }
+      window.location.reload(true);
   }
   
 

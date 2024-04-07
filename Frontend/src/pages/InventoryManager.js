@@ -2,6 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import Navbar from '../components/Navbar';
 import InvItem from '../components/InvItem';
+import { NavLink } from 'react-router-dom';
 
 function InventoryManager(){
     const [data,setData] = useState([])
@@ -28,6 +29,9 @@ function InventoryManager(){
   return (
     <div>
         <Navbar/>
+        <div className='mt-4  w-[100vw] flex '>
+        <NavLink to={`/stock`} className='mx-auto px-4 py-2 bg-blue-500 rounded-lg text-white'>Check stock</NavLink>
+        </div>
         {data.length > 0 ? (
         data.map((dataitem) => (
           <InvItem key={dataitem._id} dataitem={dataitem}/>

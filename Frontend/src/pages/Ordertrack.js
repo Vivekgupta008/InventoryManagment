@@ -1,5 +1,5 @@
 import React from 'react'
-import Stock from '../components/Stock'
+import Stock from './Stock'
 import Navbar from '../components/Navbar';
 import { useState,useEffect } from 'react';
 import Item from '../components/Item';

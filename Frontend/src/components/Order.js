@@ -24,7 +24,7 @@ function Order() {
     return (
         <div>
             {data ? (
-                <div className='py-10 mx-96 flex justify-center gap-10 mt-48 border-black border-2 items-center'>
+                <div className='py-10 mx-96 flex justify-center gap-10 mt-48 border-black border-2 items-center rounded-lg'>
                     <div className='flex flex-col gap-2 mt-3'>
                         <div className='text-[20px] font-bold mb-8'>{data._id}</div>
                         <div>{data.customer.name}</div>

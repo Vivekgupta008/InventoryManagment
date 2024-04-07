@@ -17,6 +17,7 @@ function DelItem({dataitem}) {
             catch(error){
                 console.error(error);
             }
+        window.location.reload(true);
     }
 
   return (

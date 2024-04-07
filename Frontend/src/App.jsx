@@ -8,6 +8,7 @@ import Analytics from "./pages/Analytics";
 import Register from "./pages/RegisterPage";
 import InventoryManager from "./pages/InventoryManager";
 import Order from "./components/Order";
+import Stock from "./pages/Stock";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/orderTrack' element ={<Ordertrack/>}/>
           <Route path='/analytics' element={<Analytics/>}/>
           <Route path= '/details/:id' element ={<Order/>}/>
+          <Route path="/stock" element={<Stock/>}/>
       </Routes>
     </div>
   );
