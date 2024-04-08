@@ -64,10 +64,17 @@ function LoginPage(){
       <div className='flex justify-center w-[100%] mt-[2%] align-middle items-center'>
         <input  type={show ? "text" :"password"} className='border-black border-2 outline-0 min-w-[70%] px-4 py-1 rounded-md' placeholder='Enter password' value={data.password} id='password' onChange={(e)=>handle(e)}>
         </input>
+<<<<<<< HEAD
         <div onClick={(event)=>{toggleShow(event)}} className='absolute ml-[24%]'>{show ?(<IoEye/>):(<IoEyeOff/>)}</div>
       </div>
       <div  className='w-[70%] mt-[2%]'>
        <button className='w-[100%] bg-black text-white px-4 py-1 rounded-md min-w-[70%]' onClick={(e)=>{authLogin(e)}}>Login</button></div>
+=======
+        <div onClick={(event)=>{toggleShow(event)}} className='absolute right-[37%] top-[48%]'>{show ?(<IoEye/>):(<IoEyeOff/>)}</div>
+      </div>
+      <div  className='w-[70%] mt-[2%]'>
+       <button className='w-[100%] bg-black text-white px-4 py-1 rounded-md' onClick={(e)=>{authLogin(e)}}>Login</button></div>
+>>>>>>> aaf87644eab210e4829e77adb5118d082f8a16e0
       <NavLink to={'/register'}><span className='text-xs mt-[1%] text-opacity-100'>New User? </span><span className='text-xs mt-[1%] text-opacity-100 text-gray-400'>Register</span></NavLink>
      </div>
     </div>
